@@ -8,6 +8,8 @@ Il s'agit d'un dendrogramme qui permet d'organiser les données d'habitants par 
 
 Cette visualisation permet également lorsque l'on passe avec la souris sur les cercles de voir le nombre d'habitant en milliers du canton mais aussi il est possible de bouger (click + drag) les cercles pour les réorganiser à sa guise. 
 
+![image](https://user-images.githubusercontent.com/100705690/170721623-74ee86e8-7047-4a8e-a0dd-cd8db2b159a5.png)
+
 ## Source des données 
 Les données ont été récoltées auprès de l'Office Fédérale des statistiques de la Confédération hélvétique
 
