@@ -4,7 +4,7 @@ Il s'agit d'un projet de visualisation sur la démographie des cantons suisses a
 
 Il s'agit d'un dendrogramme qui permet d'organiser les données d'habitants par canton sous forme hiérarchisée. On y trouve 3 catégories de canton à savoir les cantons Germanophones, les cantons Francophones et enfin les cantons Italophones. 
 
-![image](https://user-images.githubusercontent.com/100667439/170717208-cf70f1e9-3f4a-434b-9415-21471efbc9d2.png)
+![image](https://user-images.githubusercontent.com/100705690/171423684-54e7047a-1182-4a4f-9a13-b44582b342c0.png)
 
 Cette visualisation permet également lorsque l'on passe avec la souris sur les cercles de voir le nombre d'habitant en milliers du canton mais aussi il est possible de bouger (click + drag) les cercles pour les réorganiser à sa guise. 
 
