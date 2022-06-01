@@ -10,21 +10,31 @@
 </head>
 
 <body>
-<h1>Répartition des habitants suisses selon les 26 cantons (2019)</h1>
-<p>Pour voir le nombre d'habitants par canton, passe ta souris sur les cercles. Tu peux même les réorganiser à ta guise ! Amuse-toi bien !</p>
-<p>Les données proviennent de l'Office Fédéral de la Statistique de la Confédération Helvétique (2019).</p>
+<h1>La Suisse des 26 cantons</h1>
+<p>Cette visualisation tire ses données de l'Office Fédéral de la Statistique de la Confédération helvétique.</p> 
+<p>La carte te permet de voir où se situe les chefs-lieux de chaque canton et le dendrogramme de visualiser le nombre d'habitants en milliers dans chaque canton.</p>
+<p> Pour voir le nombre d'habitants par canton ou le nom et les coordonnées d'un chef-lieu, il te suffit de passer ta souris sur les cercles. Tu peux même les réorganiser à ta guise ! Amuse-toi bien !</p>
+<p>Cette visualisation se fait dans le cadre du cours de <b>"Visualisation de données"</b> donné par Isaac Panté. Vous trouverez de plus amples informations sur le <a href="https://github.com/VittoGCM/Demographie_Suisse_Cantons.git">Github</a></p> 
+
 
 
 <div id="my_dataviz"></div>
 <h2>Légende de la visualisation</h2>
   <div>
-    <svg id="my_dataviz2" height=300 width=450></svg>
+    <svg id="my_dataviz2" height=100 width=450></svg>
   </div>
-
+  <div>
+    <svg id="my_dataviz3"></svg>
+  </div>
+  
 <style>
 .node:hover{
   stroke-width: 7px !important;
   opacity: 0.8 !important;
+}
+ .circle:hover{
+    stroke: black;
+    stroke-width: 4px;
 }
 </style>
 
