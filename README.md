@@ -1,6 +1,6 @@
-# D_mographie
+# Démographie
 ## Description 
-Il s'agit d'un projet de visualisation sur la démographie des cantons suisses avec des données de l'Office Fédérale de la statistique de la Confédération hélvétique de 2019. Ce projet intervient dans le cadre du cours de Visualisation de données de l'Université de Lausanne.  
+Il s'agit d'un projet de visualisation sur la démographie des cantons suisses avec des données de l'Office Fédéral de la statistique de la Confédération hélvétique de 2019. Ce projet intervient dans le cadre du cours de Visualisation de données de l'Université de Lausanne.  
 
 Il s'agit d'un dendrogramme qui permet d'organiser les données d'habitants par canton sous forme hiérarchisée. On y trouve 3 catégories de canton à savoir les cantons Germanophones, les cantons Francophones et enfin les cantons Italophones. 
 
@@ -11,7 +11,7 @@ Cette visualisation permet également lorsque l'on passe avec la souris sur les 
 ![image](https://user-images.githubusercontent.com/100705690/170721828-33b320fa-658e-41b3-a936-c76e839b0bed.png)
 
 ## Source des données 
-Les données ont été récoltées auprès de l'Office Fédérale des statistiques de la Confédération hélvétique
+Les données ont été récoltées auprès de l'Office Fédéral des statistiques de la Confédération hélvétique
 
 ## Outils 
 Ce projet a été réalisé avec l'utilisation de la librairie d3 et de Visual Studio Code. 
