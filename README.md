@@ -18,7 +18,7 @@ Il est en outre possible de connaître la longitude et la latitude du chef lieu 
 Ce projet intervient dans le cadre du cours de "visualisation de données" donné par Isaac Panté (SLI, Lettres, UNIL) aux étudiants du master DCS de l'Université de Lausanne.
 
 ## Source des données 
-Les données ont été récoltées auprès de l'Office Fédéral des statistiques de la Confédération hélvétique
+Les données ont été récoltées auprès de l'Office Fédéral des statistiques de la Confédération helvétique
 
 ## Outils 
 Ce projet a été réalisé avec l'utilisation de la librairie d3 et de Visual Studio Code. 
