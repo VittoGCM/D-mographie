@@ -216,7 +216,7 @@ d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/w
     }
     var mousemove = function(event, d) {
       Tooltip
-        .html(d.name + "<br>" + "long: " + d.long + "<br>" + "lat: " + d.lat + "<br>" + "Habitants en miliers du canton: " + d.habs)
+        .html(d.name + "<br>" + "Longitutde: " + d.long + "<br>" + "Latitude: " + d.lat + "<br>" + "Habitants en milliers du canton: " + d.habs)
         .style("left", (event.x)/2 + "px")
         .style("top", (event.y)/2 - 30 + "px")
     }
