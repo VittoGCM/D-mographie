@@ -10,6 +10,9 @@ Cette visualisation permet également lorsque l'on passe avec la souris sur les 
 
 ![image](https://user-images.githubusercontent.com/100705690/170721828-33b320fa-658e-41b3-a936-c76e839b0bed.png)
 
+## Contexte de développement
+Ce projet intervient dans le cadre du cours de "visualisation de données" donné par Isaac Panté (SLI, Lettres, UNIL) aux étudiants du master DCS de l'Université de Lausanne.
+
 ## Source des données 
 Les données ont été récoltées auprès de l'Office Fédéral des statistiques de la Confédération hélvétique
 
