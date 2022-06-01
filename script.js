@@ -1,28 +1,28 @@
 // dimensions du graphique
-var width = 600
-var height = 450
+const width = 1500
+const height = 800
 
 // ajout de l'objet svg au corps de la page
-var svg = d3.select("#my_dataviz")
+const svg = d3.select("#my_dataviz")
   .append("svg")
     .attr("width", width)
     .attr("height", height)
 
 // Fichier à lire
-d3.csv("Cantons.csv", function(data) {
+d3.csv("Cantons.csv").then( function(data) {
 
   // Palette de couleur pour les régions linguistiques
-  var color = d3.scaleOrdinal()
+  const color = d3.scaleOrdinal()
     .domain(["All", "Fr", "It"])
     .range(d3.schemeDark2);
 
   // Echelle de la taille des cercles
-  var size = d3.scaleLinear()
+  const size = d3.scaleLinear()
     .domain([0, 1000])
     .range([5,55])  // cercles entre 5 et 55 px
 
   // Création de la bulle d'information
-  var Tooltip = d3.select("#my_dataviz")
+  const Tooltip = d3.select("#my_dataviz")
     .append("div")
     .style("opacity", 0)
     .attr("class", "tooltip")
@@ -33,15 +33,15 @@ d3.csv("Cantons.csv", function(data) {
     .style("padding", "5px")
 
   // Trois fonctions qui modifient l'infobulle lorsque l'utilisateur survole / déplace / quitte une cellule.
-  var mouseover = function(d) {
+  const mouseover = function(event, d) {
     Tooltip
       .style("opacity", 1)
   }
-  var mousemove = function(d) {
+  const mousemove = function(event, d) {
     Tooltip
       .html('<u>' + d.key + '</u>' + "<br>" + d.value + " milliers d'habitants")
-      .style("left", (d3.mouse(this)[0]+20) + "px")
-      .style("top", (d3.mouse(this)[1]) + "px")
+      .style("left", (event.x/2+20) + "px")
+      .style("top", (event.y/2-30) + "px")
   }
   var mouseleave = function(d) {
     Tooltip
@@ -52,8 +52,7 @@ d3.csv("Cantons.csv", function(data) {
   var node = svg.append("g")
     .selectAll("circle")
     .data(data)
-    .enter()
-    .append("circle")
+    .join("circle")
       .attr("class", "node")
       .attr("r", function(d){ return size(d.value)})
       .attr("cx", width / 2)
@@ -71,7 +70,7 @@ d3.csv("Cantons.csv", function(data) {
            .on("end", dragended));
 
   // Caractéristiques des forces appliquées aux neouds :
-  var simulation = d3.forceSimulation()
+  const simulation = d3.forceSimulation()
       .force("center", d3.forceCenter().x(width / 2).y(height / 2)) // Attraction au centre de la zone svg
       .force("charge", d3.forceManyBody().strength(.1)) // Les neouds sont attirés les uns par les autres si la valeur est > 0.
       .force("collide", d3.forceCollide().strength(.2).radius(function(d){ return (size(d.value)+3) }).iterations(1)) // Force qui évite le chevauchement des cercles
@@ -82,22 +81,22 @@ d3.csv("Cantons.csv", function(data) {
       .nodes(data)
       .on("tick", function(d){
         node
-            .attr("cx", function(d){ return d.x; })
-            .attr("cy", function(d){ return d.y; })
+            .attr("cx", d => d.x)
+            .attr("cy", d => d.y)
       });
 
   // Fonction qui se lance lorsqu'un noeud est traîné
-  function dragstarted(d) {
-    if (!d3.event.active) simulation.alphaTarget(.03).restart();
+  function dragstarted(event, d) {
+    if (!event.active) simulation.alphaTarget(.03).restart();
     d.fx = d.x;
     d.fy = d.y;
   }
-  function dragged(d) {
-    d.fx = d3.event.x;
-    d.fy = d3.event.y;
+  function dragged(event, d) {
+    d.fx = event.x;
+    d.fy = event.y;
   }
-  function dragended(d) {
-    if (!d3.event.active) simulation.alphaTarget(.03);
+  function dragended(event, d) {
+    if (!event.active) simulation.alphaTarget(.03);
     d.fx = null;
     d.fy = null;
   }
