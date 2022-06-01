@@ -10,6 +10,10 @@ Cette visualisation permet également lorsque l'on passe avec la souris sur les 
 
 ![image](https://user-images.githubusercontent.com/100705690/170721828-33b320fa-658e-41b3-a936-c76e839b0bed.png)
 
+Il est en outre possible de connaître la longitude et la latitude du chef lieu du canton en déplaçant la souris sur la carte de la Suisse.
+![image](https://user-images.githubusercontent.com/100705690/171424246-de6a91be-01c1-4933-a1b6-3dafa25afbd1.png)
+
+
 ## Contexte de développement
 Ce projet intervient dans le cadre du cours de "visualisation de données" donné par Isaac Panté (SLI, Lettres, UNIL) aux étudiants du master DCS de l'Université de Lausanne.
 
