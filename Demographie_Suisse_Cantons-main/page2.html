@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+ 
+  <script src="https://d3js.org/d3.v7.js"></script>
+ 
+  <!-- Palette de couleurs -->
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <title>Visualisation de la démographie des cantons suisses</title>
+</head>
+
+<body>
+<h1>Démographie de la Suisse dans les 26 cantons</h1>
+<p>Cette visualisation tire ses données de l'Office Fédéral de la Statistique de la Confédération helvétique.</p> 
+<p>Le dendrogramme te permet de visualiser le nombre d'habitants en milliers dans chaque canton.</p>
+<p> Pour voir le nombre d'habitants par canton ou le nom, il te suffit de passer ta souris sur les cercles. Tu peux même les réorganiser à ta guise ! Amuse-toi bien !</p>
+<p>Cette visualisation se fait dans le cadre du cours de <b>"Visualisation de données"</b> donné par Isaac Panté. Vous trouverez de plus amples informations sur le <a href="https://github.com/VittoGCM/Demographie_Suisse_Cantons.git">Github</a></p> 
+
+<head>Type de graphique sélectionné : </head>
+<button onclick="location.href='page1.html'">Carte de la Suisse</button>
+<button onclick="location.href='page2.html'"button style="background-color: aliceblue;"><b>Dendrogramme</b></button>
+<button onclick="location.href='page3.html'">Graphique en barres</button>
+
+<div id="my_dataviz"></div>
+<h2>Légende de la visualisation</h2>
+  <div>
+    <svg id="my_dataviz2" height=100 width=450></svg>
+  </div>
+<body>
+    <style>
+        .node:hover{
+          stroke-width: 7px !important;
+          opacity: 0.8 !important;
+        }
+         .circle:hover{
+            stroke: black;
+            stroke-width: 4px;
+        }
+        </style>
+    <script src="script_dendrogramme.js"></script> 
+</body>
+</html>
